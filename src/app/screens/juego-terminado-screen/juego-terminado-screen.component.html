@@ -1,0 +1,46 @@
+<section class="juego-terminado">
+    <div class="wrapper">
+        <mat-drawer-container>
+            <mat-drawer #drawer mode='over' position="start">
+                <app-left-sidebar (cerrar)="drawer.toggle()"></app-left-sidebar>
+            </mat-drawer>
+            <app-header-app (drawer)="drawer.toggle()"></app-header-app>
+            <div class="body-juego-terminado">
+                <div class="section-puntos">
+                    <div class="congrats">
+                        <div class="line-color">
+                            <div class="vertical-line" style="height: 111px;"></div>
+                        </div>
+                        <div class="title-congrats">
+                            <span>¡EXCELENTE CARRERA!</span>
+                        </div>
+                    </div>
+                    <div class="line-color-b mb-3">
+                        <div class="vertical-line-b" ></div>
+                    </div>
+                    <div class="puntaje">
+                        <div class="obtenido mt-3 mb-3">
+                            <span>OBTUVISTE</span>
+                        </div>
+                        <div class="numero-puntos mt-3 mb-3">
+                            <span>1400</span>
+                        </div>
+                        <div class="letra-puntos mt-3 mb-3">
+                            <span>puntos</span>
+                        </div>
+                    </div>
+                    <div class="gracias mt-3 mb-3">
+                        <span class="text-gracias">Gracias por participar, acumula más puntos y gana una increíble </span>
+                        <span class="text-gracias" style="font-family: Avenir-Bold;">Ducati Scrambler.</span>
+                    </div>
+                    <div class="irInicio mt-3 mb-3">
+                        <button class="btn-inicio" (click)="goInicio()">Ir al inicio</button>
+                    </div>
+                </div>
+                <div class="footer mt-3">
+                    <app-footer-app></app-footer-app>
+                </div>
+            </div>
+        </mat-drawer-container>
+    </div>
+</section>

@@ -1,0 +1,149 @@
+.wrapper{
+    width: 100%;
+    height: 100vh;
+    background-color: #FFFFFF;
+}
+
+.body-juego-terminado{
+    width: 100%;
+    height: 90vh;
+    background-color: #FFFFFF;
+    overflow-y: scroll!important;
+    //overflow-x: hidden!important;
+}
+
+.section-puntos{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    gap: 0.5rem;
+}
+
+.congrats{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.line-color{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    width: 5%;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+.line-color-b{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    width: 90px;
+    //padding-top: 1rem;
+    //padding-bottom: 1rem;
+}
+
+.vertical-line{
+    width: 5px; /* Line width */
+    background-color: #CD0000; /* Line color */
+    height: 40px!important; /* Override in-line if you want specific height. */
+    float: left;
+}
+
+.vertical-line-b{
+    width: 90px; /* Line width */
+    background-color: #CD0000; /* Line color */
+    height: 160px!important; /* Override in-line if you want specific height. */
+    float: left;
+}
+
+.title-congrats{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    width: 90%;
+    //Fuente
+    text-align: left;
+    font-family: Avenir-Bold;
+    font-size: 20px;
+    letter-spacing: 0px;
+    color: #000000;
+    opacity: 1;
+}
+
+.puntaje{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    width: 90%;
+}
+
+.obtenido{
+    font-size: 16px;
+    text-align: center;
+    font-family: Avenir-Bold;
+    letter-spacing: 0px;
+    color: #CD0000;
+    text-transform: uppercase;
+    opacity: 1;
+}
+
+.numero-puntos{
+    font-size: 72px;
+    text-align: center;
+    font-family: Avenir-Bold;
+    letter-spacing: 0px;
+    color: #000000;
+    opacity: 1;
+}
+
+.letra-puntos{
+    font-size: 24px;
+    text-align: center;
+    font-family: Avenir;
+    letter-spacing: 0px;
+    color: #000000;
+    opacity: 1;
+}
+
+.gracias{
+    width: 328px;
+    height: 40px;
+    text-align: center;
+}
+
+.text-gracias{
+    font-size: 16px;
+    text-align: center;
+    font-family: Avenir;
+    letter-spacing: 0px;
+    color: #000000;
+}
+
+.btn-inicio{
+    width: 188px;
+    height: 40px;
+    background: #CD0000 0% 0% no-repeat padding-box;
+    opacity: 1;
+    border-radius: 0;
+    border: none;
+    //Text
+    text-align: center;
+    font-family: Avenir;
+    letter-spacing: 0.8px;
+    color: #FFFFFF;
+    text-transform: uppercase;
+    opacity: 1;
+}

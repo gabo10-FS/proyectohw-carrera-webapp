@@ -1,0 +1,68 @@
+<section class="instrucciones">
+    <div class="wrapper">
+        <mat-drawer-container>
+            <mat-drawer #drawer mode='over' position="start">
+                <app-left-sidebar (cerrar)="drawer.toggle()"></app-left-sidebar>
+            </mat-drawer>
+            <app-header-app (drawer)="drawer.toggle()"></app-header-app>
+            <div class="body-instrucciones">
+                <div class="hora-correr mb-3">
+                    <div class="line-color">
+                        <div class="vertical-line" style="height: 111px;"></div>
+                    </div>
+                    <div class="title-hora-correr">
+                        <span>¡HORA DE CORRER!</span>
+                    </div>
+                </div>
+                <span class="objetivo" style="padding-left: 11px;">Objetivo</span>
+                <div class="content-objetivo">
+                    <span class="txt-objetivo">
+                        Estás a punto de jugar Moto Rider, el juego consiste en conducir una motocicleta a través 
+                        de un camino con autos, tu misión es esquivarlos durante 120 segundos mientras la velocidad
+                        va aumentando.
+                    </span>
+                </div>
+                <div class="{{isMobile(1)}}">
+                    <div>
+                        <h3 class="title-codigos">Puntuación</h3>
+                        <table class="table" *ngIf="lista_codigos.length > 0; else sinCodigos">
+                            <thead class="head-table">
+                              <tr>
+                                <th scope="col" style="padding-left: 11px; text-align: left;">Acción</th>
+                                <th scope="col">Puntos</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr class="tr-table" *ngFor="let codigo of lista_codigos; let i=index">
+                                <td *ngIf="tiene_juegos_pendientes" style="text-align: center;">
+                                    <mat-icon class="icon-play" *ngIf="codigo.participaciones < 2" style="cursor: pointer;" (click)="jugarParticipacion(codigo)">play_circle_outline</mat-icon>
+                                </td>
+                                <td style="min-width: 100px; padding-left: 11px;">{{codigo.accion}}</td>
+                                <td style="text-align: center;">{{codigo.puntos}}</td>
+                              </tr>
+                            </tbody>
+                        </table>
+                        <ng-template #sinCodigos>
+                            <span class="txt-pnt">No se tienen códigos registrados</span>
+                        </ng-template>
+                    </div>
+                </div>
+                <span class="objetivo" style="padding-left: 11px;">Información adicional</span>
+                <div class="content-objetivo">
+                    <span class="txt-objetivo">
+                        Tienes dos oportunidades por cada código que redimimas. <br><br>
+                        La 1ra oportunidad es entrenamiento y no genera puntos.<br><br>
+                        La 2da oportunidad genera puntos, el juego termina si chocas o se termina el tiempo. <br><br>
+                        Verifica que tu conexión a Internet sea estable al momento de jugar.
+                    </span>
+                </div>
+                <div class="content-btn">
+                    <button class="btn-jugar-ahora" (click)="goLook()">Jugar ahora</button>
+                </div>
+                <div class="footer">
+                    <app-footer-app></app-footer-app>
+                </div>
+            </div>
+        </mat-drawer-container>
+    </div>
+</section>

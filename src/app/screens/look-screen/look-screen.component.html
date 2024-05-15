@@ -1,0 +1,48 @@
+<section class="look">
+    <div class="wrapper">
+        <mat-drawer-container>
+            <mat-drawer #drawer mode='over' position="start">
+                <app-left-sidebar (cerrar)="drawer.toggle()"></app-left-sidebar>
+            </mat-drawer>
+            <app-header-app (drawer)="drawer.toggle()"></app-header-app>
+            <div class="body-look">
+                <div class="nuevo-look mb-3">
+                    <div class="line-color">
+                        <div class="vertical-line" style="height: 111px;"></div>
+                    </div>
+                    <div class="title-nuevo-look">
+                        <span>NUEVO LOOK</span>
+                    </div>
+                </div>
+                <div class="content-text-look mt-3">
+                    <span class="text-look">
+                        ¿Quieres tener una idea de cómo verías si usaras unos increíbles Carrera Ducati?
+                    </span>
+                </div>
+                <div class="content-lentes">
+                    <input type="checkbox" id="btn"/>
+                    <label for="btn">
+                        <img src="/assets/images/lentes-ducati-1.png" class="lentes-img">
+                    </label>
+                    <span class="lentes-txt">CARDUC 001/S</span>
+                    <img src="/assets/images/lentes-ducati-2.png" class="lentes-img">
+                    <span class="lentes-txt">CARDUC 002/S</span>
+                    <img src="/assets/images/lentes-ducati-3.png" class="lentes-img">
+                    <span class="lentes-txt">CARDUC 003/S</span>
+                </div>
+                <div class="content-btn">
+                    <button class="btn-omitir" (click)="goJuego()">OMITIR</button>
+                    <button class="btn-usar-lentes" (click)="goJuego()">USAR LENTES</button>
+                </div>
+                <div class="holding mt-3">
+                    <span class="txt-holding">
+                        Ducati Motor Holding S.p.A. Official Licensed Product
+                    </span>
+                </div>
+                <div class="footer">
+                    <app-footer-app></app-footer-app>
+                </div>
+            </div>
+        </mat-drawer-container>
+    </div>
+</section>

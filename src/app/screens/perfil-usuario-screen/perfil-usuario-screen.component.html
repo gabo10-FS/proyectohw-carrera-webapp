@@ -1,0 +1,27 @@
+<section class="perfil">
+    <div class="wrapper">
+        <mat-drawer-container>
+            <mat-drawer #drawer mode='over' position="start">
+                <app-left-sidebar (cerrar)="drawer.toggle()"></app-left-sidebar>
+            </mat-drawer>
+            <app-header-app (drawer)="drawer.toggle()"></app-header-app>
+            <div class="{{isMobile(1)}}">
+                <div class="content-img">
+                    <img src="/assets/images/foto-perfil.png" class="foto-perfil">
+                </div>
+                <div class="{{isMobile(2)}}">
+                    <div class="line-interior"></div>
+                </div>
+                <div class="content-txt mt-3">
+                    <span class="txt-span mt-3">Angel Gabriel Aguilar Saldivar<br><br></span>
+                    <span class="txt-span">Herramientas Web<br><br></span>
+                    <span class="txt-span">Luis Yael Sánchez Méndez<br><br></span>
+                    <span class="txt-span">Otoño 2023<br><br></span>
+                </div>
+            </div>
+            <div class="footer">
+                <app-footer-app></app-footer-app>
+            </div>
+        </mat-drawer-container>
+    </div>
+</section>
